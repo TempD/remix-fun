@@ -1,4 +1,4 @@
-import { json, useLoaderData } from 'remix'
+import { json, Link, useLoaderData } from 'remix'
 import type { LoaderFunction } from 'remix'
 
 import { getPost } from '~/post'
@@ -11,5 +11,13 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 export default function PostSlug() {
   const post = useLoaderData()
-  return <main dangerouslySetInnerHTML={{ __html: post.html }} />
+  return (
+    <>
+      <main>
+        <Link to={`/admin`}>Back to Admin</Link>
+        <br />
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </main>
+    </>
+  )
 }

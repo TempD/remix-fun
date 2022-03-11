@@ -1,6 +1,5 @@
 ---
-title: 00s Mix Tape
-foo: bar
+title: 00s Mix Tape (edited)
 ---
 
 # 00s Mix Tape
