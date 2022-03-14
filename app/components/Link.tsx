@@ -68,7 +68,12 @@ export const Link = ({
   children: React.ReactNode
   to: string
 }): JSX.Element => (
-  <RemixLink to={to} className="border-gray-800/15 border border-solid">
+  <RemixLink
+    to={to}
+    className="border-gray-[rgba(27, 31, 35, 0.15)] shadow-[rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset]
+      transition-[background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1)] box-border inline-block cursor-pointer select-none rounded-md
+      border border-solid bg-[#FAFBFC] text-sm font-medium text-[#24292E]"
+  >
     {children}
   </RemixLink>
 )
